@@ -1,12 +1,12 @@
 replicaCount: 2
 image:
-  repository: yourrepository/your-aspnetcore-app
+  repository: narendransekar/my-aspnetcore-chart
   tag: latest
   pullPolicy: IfNotPresent
 service:
   port: 80
   type: ClusterIP
 smb:
-  storageAccountName: your-storage-account-name
-  storageAccountKey: your-storage-account-key
-  shareName: your-share-name
+  storageAccountName: mystorageweb
+  storageAccountKey: Kk9DY3/mCXEZ+McyVKuCZJmO+R8p+pQKGJ69Q2QTUdLHWQWACV5THyIUMdzplsz27vjEvKbLuwFO+AStkCfS3A==
+  shareName: smbshare
