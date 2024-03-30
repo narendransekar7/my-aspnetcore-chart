@@ -1,15 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "my-aspnetcore-chart.fullname" . }}
-  labels:
-    {{- include "my-aspnetcore-chart.labels" . | nindent 4 }}
+  name: aspnetcore-service
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 80
       protocol: TCP
-      name: http
   selector:
-    {{- include "my-aspnetcore-chart.selectorLabels" . | nindent 4 }}
+    app: aspnetcore-app
