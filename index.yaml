@@ -1,0 +1,4 @@
+apiVersion: v2
+name: my-aspnetcore-chart
+description: A Helm chart for deploying ASP.NET Core application with NGINX to AKS cluster using SMB file share with storage account name and key
+version: 0.1.0
